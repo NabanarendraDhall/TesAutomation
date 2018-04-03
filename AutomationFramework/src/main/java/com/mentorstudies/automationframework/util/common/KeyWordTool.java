@@ -41,6 +41,9 @@ public class KeyWordTool {
 		if (keyWordValue.startsWith("cssSelector")) {
 			return By.cssSelector(keyWordValue.substring(keyWordValue.indexOf(':') + 1));
 		}
+		if (keyWordValue.startsWith("tagName")) {
+			 return By.tagName(keyWordValue.substring(keyWordValue.indexOf(':') + 1));
+		}
 
 		throw new AutomationFrameworkException("Keyword Type Unknown [" + keyWordValue + "]");
 	}
